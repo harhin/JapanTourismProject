@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sightseeing Locations</title>
+    <link rel="stylesheet" href="ExternalCSS.css" />
+    <link rel="stylesheet" href="dropdown.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("input").focus(function() {
+                $(this).css("background-color", "#cccccc");
+            });
+            $("input").blur(function() {
+                $(this).css("background-color", "#ffffff");
+            });
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+        
+        .bg {
+            /* The image used */
+            background-image: url("traveldestinationheader.png");
+            /* Full height */
+            height: 400;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            color: black;
+        }
+        /* Centers heading 1 */
+        
+        h2 {
+            text-align: left;
+            text-transform: uppercase;
+            color: pink;
+        }
+        /* Makes all Sub headings pink and uppercase to help differentiate between The Main Heading and t*/
+        
+        ul.a {
+            list-style-type: square !important;
+            display: inline-block !important;
+            background-color: whitesmoke !important;
+            float: none !important;
+            box-shadow: none !important;
+        }
+        /* overides the dropdown menu external css sheet to ensure that the list don't break */
+        
+        .liv2 {
+            float: none !important;
+            font-weight: normal;
+        }
+        /* Same reason as above.*/
+        
+        #intro {
+            text-align: center
+        }
+        /* Centers Paragraphs */
+        
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Centers Images */
+        
+        div>p {
+            font-style: oblique;
+        }
+        /* Combinator handles the intro paragraphs for each page */
+        
+        #lodgings {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        #lodgings td,
+        #lodgings th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        
+        #lodgings tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        #lodgings tr:hover {
+            background-color: #ddd;
+        }
+        
+        #lodgings th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: darkred;
+            color: white;
+        }
+        
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type=submit] {
+            width: 100%;
+            background-color: darkred;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+            background-color: rgb(114, 5, 5);
+        }
+        /*CSS Form*/
+    </style>
+
+</head>
+<!-- I want to emphasize that the use of the center element is that of a stopgap. -->
+
+<body>
+    <img src="images/sightseeinglocationsheader.png" alt="HTML5 Icon" style="width:100%;height:500px;">
+
+    <header>
+        <ul>
+            <li><a class="active" href="../../MerandaSection/Home/home.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Info</a>
+                <div class="dropdown-content">
+                    <a href="../../MerandaSection/About/about.html">About Us</a>
+                    <a href="../../MerandaSection/Search_Navigation/search_navigation.html">Search & Navigation</a>
+                    <a href="../../MerandaSection/Contact/contact.html">Contact Page</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="../../KieranSection/travel/travel.html" class="dropbtn">Travel</a>
+                <div class="dropdown-content">
+                    <a href="../../KieranSection/transpocost/transpocost.html">Travel Costs</a>
+                    <a href="../../KieranSection/pack/pack.html">What To Pack</a>
+                    <a href="../../KieranSection/transport/transport.html">Transportation</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="../Do_In_Japan/do_in_japan.html" class="dropbtn">What To Do In Japan</a>
+                <div class="dropdown-content">
+                    <a href="../Travel_Destination/travel_destinations.html">Travel Destinations</a>
+                    <a href="../Food/food.html">Food</a>
+                    <a href="../Lodging/lodging.html">Lodging</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="../../MithraSection/Helpful_Tips/HelpfulTips.html" class="dropbtn">Helpful Tips</a>
+                <div class="dropdown-content">
+                    <a href="../../MithraSection/Common_Japanese_Phrases/CommonJapanesePhrases.html">Common Phrases</a>
+                    <a href="../../MithraSection/Good_And_Bad_Manners/GoodAndBadManners.html">Good & Bad Manners</a>
+                    <a href="../../MithraSection/Common_Signs/CommonSigns.html">Useful Signs to Look Out For</a>
+                </div>
+            </li>
+        </ul>
+        <!-- Code written here is to create the dropdown menu -->
+
+    </header>
+    <hr>
+
+    <div style="padding-left: 20px; padding-right: 20px; padding-bottom: 20px">
+        <!-- Styling gives padding to the main body, give the site a better look -->
+
+        <h1>
+            Sightseeing Locations
+            <i class="fas fa-torii-gate"></i>
+            <!-- CSS Icon used -->
+        </h1>
+        <hr><br>
+        <img src="images/Mt.Fuji.jpg" alt="Mount Fuji" width="1000" height="650">
+        <p id="intro">
+            Japan is a country known for a diverse and multitude of things! From beautiful natural scenery and serene and spiritual temples to the towering skyscrapers of urban metropolitan Japan, there is something for every visitor!
+        </p>
+        <hr>
+        <section>
+            <h2>Ghibli Museum</h2>
+            <p>The <i>Ghibli Museum </i>is a museum dedicated to the Japanese animation studio, Studio Ghibli, known for some of the most iconic movies to come out of the medium! It features exhibits from scenes and characters of their movies, think of it
+                like a Japanese DisneyLand, though there is also one of those.</p>
+            <h2>Tokyo Tower</h2>
+            <p>Located in Tokyo, It is the 2nd largest building in Tokyo and is one of the major communications towers, built in 1958. It is similar in design to the eiffel tower, as it follows a lattice design. </p>
+            <h2>Tokyo Skytree</h2>
+            <p>It is currently the tallest building in all of Japan and the second tallest (formally the tallest before the Burj Khalifa) in the whole world. If your looking for an amazing view of the city and nearby sea, then this is the place for you!
+                Though a warning, it may take some time to get all the way up there. </p>
+            <h2>Mount Fuji</h2>
+            <p>The Serene and beautiful <i>Mount Fuji</i>is one of Japan’s most famous and recognizable landmarks, to the point where the word Japan could be associated with the large volcano! Beware though, if you wish to see Mt. Fuji with your own eyes,
+                you better wake up early, as many times clouds cover most of the mountain! That’s just how tall it is.</p>
+            <h2>Japanese Temples & Shrines</h2>
+            <p>If your interested in seeing traditional Japanese architecture, then look no further than the many temples and shrines dedicated to the Shinto and Buddhist religions of Japan! With many sites located all across Japan, you can easily find a
+                temple or shrine by just asking a local or by looking online, and it won’t even be that far of a trip too (it tends to be free too). If you would like to see some of the more famous (and at times, larger) temples and shrines then here
+                is a list of 5 of some of the most famous sites:</p>
+            <ul class="a">
+                <li class='liv2'>Meiji Jingu Shrine</li>
+                <li class='liv2'>Itsukushima Shrine</li>
+                <li class='liv2'>Nikko Toshugu Shrine</li>
+                <li class='liv2'>Tsurugaoka Hachimangu</li>
+                <li class='liv2'>Fushimi Inari Taisha</li>
+            </ul>
+            <!-- Unordered list-->
+            <h2>Japanese Castles</h2>
+            <p>Many of the famed castles such as Osaka Castle or Himeji Castle With tall central keeps and angled stone walls, the castles of Japan and it’s samurai lords are some of the most unique and beautiful structures that can be seen in Japan while
+                still being formidable in its defence during Japan’s wars of the past. There are also some of the most extravagant buildings constructed by the Japanese, with some being gilded in huge amounts of gold! Here is our top 5 list of Japanese
+                Castles!
+                <ol>
+                    <li class='liv2'>Osaka Castle</li>
+                    <li class='liv2'>Himeji Castle</li>
+                    <li class='liv2'>Nagoya Castle</li>
+                    <li class='liv2'>Matsumoto Castle</li>
+                    <li class='liv2'>Kumamoto Castle</li>
+                </ol>
+                <!--Ordered list-->
+            </p>
+        </section>
+
+        <hr>
+        <br>
+        <br>
+
+        <div class="div2">
+            <form action="action_page.php">
+                <label for="lodge"> Save your list on places to go!</label>
+                <input type="text" id="lodge" name="lodging" placeholder="Type here">
+                <input type="submit" value="Save">
+            </form>
+            <!--Form used for saving information for later-->
+        </div>
+
+    </div>
+</body>
+
+</html>

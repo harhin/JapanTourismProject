@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="ToDoListCSS.css">
+    <script src="ToDoList.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("input").focus(function() {
+                $(this).css("background-color", "#cccccc");
+            });
+            $("input").blur(function() {
+                $(this).css("background-color", "#ffffff");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="myDIV" class="header">
+        <h2>My To Do List</h2>
+        <input type="text" id="myInput" placeholder="Title...">
+        <span onclick="newElement()" class="addBtn">Add</span>
+    </div>
+
+    <ul id="myUL" class="a">
+        <li class="liv2">Ideas under here....</li>
+    </ul>
+</body>
+
+</html>

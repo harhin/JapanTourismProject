@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Travel Destinations</title>
+    <link rel="stylesheet" href="ExternalCSS.css" />
+    <link rel="stylesheet" href="dropdown.css" />
+    <!-- External CSS Sheets, used for the dropdown menu and standardizing certain aspects -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="traveldes.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+    </script>
+    <script>
+        //JQuery Script
+        //Alert on image
+        $(document).ready(function() {
+            $(".info1").mouseenter(function() {
+                alert("Double clicking on the header will send you to the plaza's website, you may find important information like floor maps on it. Make sure to click on the checkbox to avoid seeing this message again.");
+            });
+        });
+        //Opening web page
+        $(document).ready(function() {
+            $('.info2').dblclick(function() {
+                window.open(this.href = "https://mitsui-shopping-park.com/divercity-tokyo/en/");
+                return false;
+            });
+        });
+
+        //Fade In
+        $(document).ready(function() {
+            $(".listinfo").click(function() {
+                $(".divinfo").fadeIn("slow");
+            });
+        });
+
+        //Fade Out
+        $(document).ready(function() {
+            $(".byeinfo").click(function() {
+                $(".divinfo").fadeOut(250);
+            });
+        });
+
+        $(document).ready(function() {
+            $("button").click(function() {
+                $(".target").effect("bounce", {
+                    times: 3
+                }, 300);
+            });
+        });
+    </script>
+
+
+    <!-- Website used to get the icons.-->
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+        
+        .bg {
+            /* The image used */
+            background-image: url("traveldestinationheader.png");
+            /* Full height */
+            height: 400;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            color: black;
+        }
+        
+        h2 {
+            text-align: left;
+            text-transform: uppercase;
+            color: pink;
+        }
+        
+        #img1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        #intro {
+            text-align: center !important;
+        }
+        
+        .button {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0px 2px 5px 0px rgb(0, 0, 0);
+            width: 300px;
+            height: 50px;
+        }
+        
+        .button:link,
+         :visited {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0px 2px 5px 0px rgb(0, 0, 0);
+            width: 300px;
+        }
+        
+        .button:hover,
+         :active {
+            color: darkblue;
+        }
+        /*Code for CSS Buttons*/
+        
+        .p1::first-line {
+            color: #ff0000;
+            font-variant: small-caps;
+        }
+        /*Pseudo-element that changes the first line of a paragraph*/
+        
+        .p2 {
+            display: none;
+            background-color: yellow;
+            padding: 20px;
+            overflow: scroll;
+            width: 450px;
+            height: 100px;
+        }
+        
+        div.extra:hover p {
+            display: block;
+        }
+        /*A nice trick using overflow that allows me to add in additional informaton for those who may be interested. */
+        
+        div.intro>p {
+            font-style: oblique;
+        }
+        
+        @keyframes example {
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: pink;
+            }
+            from {
+                transform: translate(0px, 0px);
+            }
+            to {
+                transform: translate(1370px, 0px);
+            }
+        }
+        
+        div.ani {
+            width: 10px;
+            height: 10px;
+            background-color: pink;
+            transform: translate(1370px, 0px);
+            animation-name: example;
+            animation-duration: 4s;
+        }
+        /*I wanted to create a small block animation to signify movement as to show in a way, someone travelling between place to place. The bottom horizontal break is used as a road while a block is supposed to represent a person. */
+        
+        .label {
+            font-weight: bold;
+            font-size: 10px;
+            display: block;
+            overflow: hidden;
+            background-color: darkred;
+            color: pink;
+            border: 0.5px solid black;
+            width: 500px;
+            box-shadow: 0px 2px 5px 0px rgb(0, 0, 0);
+        }
+        
+        .label:hover {
+            background-color: rgb(63, 5, 5);
+        }
+        
+        .full {
+            display: none;
+            font-weight: normal;
+            overflow: hidden;
+            background-color: #ddd;
+            border: solid black 1px;
+            border-top: none;
+        }
+        /*CSS Code used for Sections of Information on each district in Tokyo*/
+    </style>
+
+
+</head>
+
+
+<body>
+
+    <img src="images/traveldestinationheader.png" alt="HTML5 Icon" style="width:100%;height:500px;">
+
+    <header>
+        <ul>
+            <li><a class="active" href="../../MerandaSection/Home/home.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Info</a>
+                <div class="dropdown-content">
+                    <a href="../../MerandaSection/About/about.html">About Us</a>
+                    <a href="../../MerandaSection/Search_Navigation/search_navigation.html">Search & Navigation</a>
+                    <a href="../../MerandaSection/Contact/contact.html">Contact Page</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="../../KieranSection/travel/travel.html" class="dropbtn">Travel</a>
+                <div class="dropdown-content">
+                    <a href="../../KieranSection/transpocost/transpocost.html">Travel Costs</a>
+                    <a href="../../KieranSection/pack/pack.html">What To Pack</a>
+                    <a href="../../KieranSection/transport/transport.html">Transportation</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="../Do_In_Japan/do_in_japan.html" class="dropbtn">What To Do In Japan</a>
+                <div class="dropdown-content">
+                    <a href="../Travel_Destination/travel_destinations.html">Travel Destinations</a>
+                    <a href="../Food/food.html">Food</a>
+                    <a href="../Lodging/lodging.html">Lodging</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="../../MithraSection/Helpful_Tips/HelpfulTips.html" class="dropbtn">Helpful Tips</a>
+                <div class="dropdown-content">
+                    <a href="../../MithraSection/Common_Japanese_Phrases/CommonJapanesePhrases.html">Common Phrases</a>
+                    <a href="../../MithraSection/Good_And_Bad_Manners/GoodAndBadManners.html">Good & Bad Manners</a>
+                    <a href="../../MithraSection/Common_Signs/CommonSigns.html">Useful Signs to Look Out For</a>
+                </div>
+            </li>
+        </ul>
+
+    </header>
+    <hr>
+
+    <div style="padding-left: 20px; padding-right: 20px; padding-bottom: 20px">
+        <h1>
+            Travel Destinations
+            <i class="fas fa-suitcase-rolling"></i>
+        </h1>
+
+        <div class="ani"></div>
+        <hr>
+        <br>
+        <div class="intro">
+            <p id="intro">
+                Japan is a country known for a multitude of things like fresh sushi or advanced electronics. <br> As such, it is a place that is able to cater to all walks of life. From the adventurous traveller to the technology enthusiasts, <br> and
+                the food connoisseurs the manga lovers, you’ll find something that you will find interesting! You can find dozens of things to do in Tokyo <br> alone! Here are a few places that you can check out in Tokyo!
+            </p>
+        </div>
+        <img id="img1" src="images/travelmap.jpg" alt="What To Do in Japan" width="1000" height="650">
+        <br>
+        <hr>
+
+        <h1>Tokyo Life</h1>
+
+        <section>
+            <p class="p1"> <b><i>Tokyo</i></b>, capital of Japan and the most populous metropolitan area in the world. With a population of around 38 million people and a metropolis area of 2,193.96km, you can expect to meet many kinds of people while hours upon end
+                exploring this city that never sleeps. In the past, it has also hosted important events such as the 1979, 1983 and 1993 G7 summits of the world’s strongest economies as well as hosting the 1964 Summer Olympics as well as the upcoming 2020
+                Summer Olympics and Paralympics. If you are looking to do something on the side or enjoy yourself while on your trip in Japan (be it for business, vacation or attendances of the upcoming Olympics), then why not look at some of our recommended
+                locations to visit while your in Tokyo! </p>
+        </section>
+        <br>
+        <br>
+
+        <section>
+            <h2><i>Akihabara</i></h2>
+            <p class="p1"><i>Akihabara</i>, known as the center of Otaku (fans who take intrests to an obsession) culture has some of the most interesting things in all of Tokyo. <br> From retro arcade machines and rare electronics to maid cafes and anime shops, there
+                is something that will match anyone’s tastes. </p>
+            <img src="images/Akihabara.jpg" alt="What To Do in Japan" width="500" height="325">
+
+            <div class="label" onclick="show_akihabara()">
+                <h2><i>Click To Learn More</i></h2>
+            </div>
+            <div class="full" id="akihabara">
+                <p class="listinfo">Click on me to reveal more info</p>
+                <div class="divinfo" style="display:none;">
+                    <h3>Location</h3>
+                    <h3>History</h3>
+                    <h3>Attractions</h3>
+                    <h3>Otaku Culture</h3>
+                    <p class="byeinfo">Make sure to click me to fade out again</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <h2><i>Harajuku</i></h2>
+            <p class="p1">The <i>Harajuku</i> district of Tokyo is known for its vibrant art and its unique youth fashion styles. <br> If your into fashion culture and are looking to find some of new and unique ideas in youth fashion, then this is the place for you!
+            </p>
+            <img src="images/Harajuku.jpg" alt="What To Do in Japan" width="500" height="325">
+
+            <div class="label" onclick="show_harajuku()">
+                <h2><i>Click To Learn More</i></h2>
+            </div>
+            <div class="full" id="harajuku">
+                <p class="listinfo">Click on me to reveal more info</p>
+                <div class="divinfo" style="display:none;">
+                    <h3>Location</h3>
+                    <h3>History</h3>
+                    <h3>Attractions</h3>
+                    <p class="byeinfo">Make sure to click me to fade out again</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2><i>Shinjuku</i></h2>
+            <p class="p1">Known as the entertainment and business district of metropolitan Tokyo, <i>Shinjuku</i> is a great place to hang out with friends. <br> If you’re ever in need of something or just want to have fun at a Karaoke bar, then this is the place to
+                go! </p>
+            <img src="images/Shinjuku.jpg" alt="What To Do in Japan" width="500" height="325">
+
+            <div class="label" onclick="show_shinjuku()">
+                <h2><i>Click To Learn More</i></h2>
+            </div>
+            <div class="full" id="shinjuku">
+                <p class="listinfo">Click on me to reveal more info</p>
+                <div class="divinfo" style="display:none;">
+                    <h3>Location</h3>
+                    <h3>History</h3>
+                    <h3>Attractions</h3>
+                    <p class="byeinfo">Make sure to click me to fade out again</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="info2"><i>DiverCity Tokyo</i></h2>
+            <p class="p1">Although not really it's own district, <i>DiverCity</i> Plaza is a nice place to check out as what lies there is the giant mecha statue of a Gundam, <br> from the popular anime, Mobile Suit Gundam, where the robot is the namesake!</p>
+            <img class="info1" src="images/UnicornGundam.jpg" alt="Unicorn Gundam" width="500" height="325">
+
+            <div class="label" onclick="show_divercity()">
+                <h2><i>Click To Learn More</i></h2>
+            </div>
+            <div class="full" id="divercity">
+                <!--WIP-->
+                <p class="listinfo">Click on me to reveal more info</p>
+                <div class="divinfo" style="display:none;">
+                    <h3>Location</h3>
+                    <h3>History</h3>
+                    <h3>Attractions</h3>
+                    <p class="byeinfo">Make sure to click me to fade out again</p>
+                </div>
+                <!--Youtube Video-->
+                <iframe src="https://www.youtube.com/embed/TFcFSgi2wBw" width="500" height="325" frameborder="0" allowfullscreen></iframe>
+                <div class="extra">If you wish to know more about Gundam, hover over me!
+                    <p class="p2">Gundam (Hepburn: Gandamu), also known as the Gundam series (ガンダムシリーズ一覧 Gandamu Shirīzu ichiran), is a Japanese science fiction media franchise/media mix created by Yoshiyuki Tomino and Sunrise that features giant robots (mecha) with
+                        the name "Gundam" (after the original titular mecha). The franchise began on April 7, 1979 with Mobile Suit Gundam, a TV series that defined the "real robot" mecha anime genre by featuring giant robots called mobile suits in a
+                        militaristic setting. The popularity of the series and its merchandise spawned a franchise that includes television series, OVAs, films, manga, novels and video games, as well as a whole industry of model robots known as Gunpla
+                        (plastic Gundam model). Gunpla currently makes up 90 percent of the Japanese character plastic-model market. </p>
+                </div>
+                <p>Click Me to play with the Gundam</p>
+                <button id="button"> Bounce </button>
+                <div class="target">
+                    <img src="images/GundamIcon.png" width="500" height="325"> </img>
+                </div>
+            </div>
+        </section>
+
+        <br>
+        <br>
+        <br>
+
+        <h1>Sight Seeing Locations</h1>
+        <p>If your not a fan of just enjoying in Tokyo, why not also check out some of the famous sight seeing locations and landmarks in not just Tokyo,
+            <b>but across the rest of Japan</b>. If so, why not check out a few of these suggested places!</p>
+        <br>
+
+        <div>
+            <button class="button" onclick="myFunction()">See More Here</button>
+        </div>
+    </div>
+</body>
