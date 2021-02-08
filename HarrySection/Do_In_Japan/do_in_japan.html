@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> What To Do In Japan </title>
+    <link rel="stylesheet" href="ExternalCSS.css" />
+    <link rel="stylesheet" href="dropdown.css" />
+    <link rel="stylesheet" href="CSSDIJ.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="do_in_japan.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#imggal").mouseleave(function() {
+                alert("You Are Leaving the Image Gallery. Make sure to click on the checkbox to avoid seeing this message again.");
+            });
+        });
+
+        $(document).ready(function() {
+            $("#flip").click(function() {
+                $("#panel").slideToggle("slow");
+            });
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+        
+        .bg {
+            /* The image used */
+            background-image: url("traveldestinationheader.png");
+            /* Full height */
+            height: 400;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            color: black;
+        }
+        
+        h2 {
+            text-align: left;
+            text-transform: uppercase;
+            color: pink;
+        }
+        
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        #intro {
+            text-align: center
+        }
+        
+        #fs {
+            color: darkred;
+            background-image: linear-gradient(-180deg, pink, white);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            border: 2px dotted
+        }
+        
+        .button {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0px 2px 5px 0px rgb(0, 0, 0);
+            width: 300px;
+            height: 50px;
+        }
+        
+        .button:link,
+         :visited {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0px 2px 5px 0px rgb(0, 0, 0);
+            width: 300px;
+        }
+        
+        .button:hover,
+         :active {
+            color: darkblue;
+        }
+        /*Code for CSS Buttons*/
+        
+        div>p {
+            font-style: oblique;
+        }
+    </style>
+
+</head>
+<!-- I want to emphasize that the use of the center element is that of a stopgap. It is only being used to show what the 
+     organization of the content may look like on the webpages when implemented wtih CSS. It is an obsolete element in HTML5, 
+     and in regularly cases should not be used. -->
+
+<body>
+
+    <img src="images/whattodoinjapanheader.png" alt="HTML5 Icon" style="width:100%;height:500px;">
+
+    <header>
+        <ul>
+            <li><a class="active" href="../../MerandaSection/Home/home.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Info</a>
+                <div class="dropdown-content">
+                    <a href="../../MerandaSection/About/about.html">About Us</a>
+                    <a href="../../MerandaSection/Search_Navigation/search_navigation.html">Search & Navigation</a>
+                    <a href="../../MerandaSection/Contact/contact.html">Contact Page</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="../../KieranSection/travel/travel.html" class="dropbtn">Travel</a>
+                <div class="dropdown-content">
+                    <a href="../../KieranSection/transpocost/transpocost.html">Travel Costs</a>
+                    <a href="../../KieranSection/pack/pack.html">What To Pack</a>
+                    <a href="../../KieranSection/transport/transport.html">Transportation</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="../Do_In_Japan/do_in_japan.html" class="dropbtn">What To Do In Japan</a>
+                <div class="dropdown-content">
+                    <a href="../Travel_Destination/travel_destinations.html">Travel Destinations</a>
+                    <a href="../Food/food.html">Food</a>
+                    <a href="../Lodging/lodging.html">Lodging</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="../../MithraSection/Helpful_Tips/HelpfulTips.html" class="dropbtn">Helpful Tips</a>
+                <div class="dropdown-content">
+                    <a href="../../MithraSection/Common_Japanese_Phrases/CommonJapanesePhrases.html">Common Phrases</a>
+                    <a href="../../MithraSection/Good_And_Bad_Manners/GoodAndBadManners.html">Good & Bad Manners</a>
+                    <a href="../../MithraSection/Common_Signs/CommonSigns.html">Useful Signs to Look Out For</a>
+                </div>
+            </li>
+        </ul>
+
+    </header>
+    <hr>
+    <div style="padding-left: 20px; padding-right: 20px; padding-bottom: 20px">
+        <h1>
+            What To Do In Japan
+            <i class="fas fa-tasks"></i>
+        </h1>
+        <hr>
+        <br>
+        <img src="images/nation.jpg" alt="What To Do in Japan" width="1000" height="650">
+        <p id="intro">
+            When you arrive in Japan, there are many different activities to do, things to eat and sites to see, with dozens being in Tokyo alone! <br> Ranging from relaxing hot springs and delicious Ramen to the beautiful Mount Fuji and gigantic Gundam
+            statue.
+            <b>Click on the links below </b> to find additional information on what you can do in Japan, <br> be it for the upcomming summer olympics or any future trip!
+        </p>
+        <br>
+        <h3 id="flip">Image Gallery</h3>
+        <p>Click on the Image Gallery header to open and close the image gallery.</p>
+        <div id="panel">
+            <!--Container for the image gallery-->
+            <div class="container">
+                <!--Full-width images with number text-->
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                    <img src="images/japan.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                    <img src="images/Tonkatsu.jpeg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                    <img src="images/Hanabi.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="images/Wisteria_tree.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="images/Bamboo.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="images/Osaka_Castle.jpg" style="width:100%">
+                </div>
+
+                <!--Next and Previous buttons-->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!--Image text-->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <!--Thumbnail images-->
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor img" src="images/japan.jpg" style="width:100%" onclick="currentSlide(1)" alt="Japan">
+                    </div>
+
+                    <div class="column">
+                        <img class="demo cursor img" src="images/Tonkatsu.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Tonkatsu">
+                    </div>
+
+                    <div class="column">
+                        <img class="demo cursor img" src="images/Hanabi.jpg" style="width:100%" onclick="currentSlide(3)" alt="Hanabi">
+                    </div>
+
+                    <div class="column">
+                        <img class="demo cursor img" src="images/Wisteria_tree.jpg" style="width:100%" onclick="currentSlide(4)" alt="Wisteria">
+                    </div>
+
+                    <div class="column">
+                        <img class="demo cursor img" src="images/Bamboo.jpg" style="width:100%" onclick="currentSlide(5)" alt="Arashiyama">
+                    </div>
+
+                    <div class="column">
+                        <img class="demo cursor img" src="images/Osaka_Castle.jpg" style="width:100%" onclick="currentSlide(6)" alt="Osaka">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+
+            <br>
+            <br>
+            <hr id="imggal">
+            <br>
+            <br>
+
+            <div style="padding: 10px">
+                <fieldset id="fs">
+                    <legend>Check Out These Links</legend>
+                    <div>
+                        <button class="button" onclick="myFunction1()">Travel Destinations</button>
+                        <button class="button" onclick="myFunction2()">Food</button>
+
+                        <button class="button" onclick="myFunction3()">Lodging</button>
+                    </div>
+                </fieldset>
+                <!--Used a fieldset to improve the look-->
+            </div>
+        </div>
+    </div>
+
+    <hr>
+</body>
+
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cheap Lodging</title>
+    <link rel="stylesheet" href="ExternalCSS.css" />
+    <link rel="stylesheet" href="dropdown.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="cheaplodgingJS.js"></script>
+    <script>
+        //Fade In
+        $(document).ready(function() {
+            $(".listinfo").click(function() {
+                $(".divinfo").fadeIn("slow");
+            });
+        });
+
+        //Fade Out
+        $(document).ready(function() {
+            $(".byeinfo").click(function() {
+                $(".divinfo").fadeOut(250);
+            });
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+        
+        .bg {
+            /* The image used */
+            background-image: url("traveldestinationheader.png");
+            /* Full height */
+            height: 400;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            color: black;
+        }
+        
+        h2 {
+            text-align: left;
+            text-transform: uppercase;
+            color: pink;
+        }
+        
+        #img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        #intro {
+            text-align: center
+        }
+        
+        div>p {
+            font-style: oblique;
+        }
+        
+        .label {
+            font-weight: bold;
+            font-size: 10px;
+            display: block;
+            overflow: hidden;
+            background-color: darkred;
+            color: pink;
+            border: 0.5px solid black;
+            width: 500px;
+            box-shadow: 0px 2px 5px 0px rgb(0, 0, 0);
+        }
+        
+        .label:hover {
+            background-color: rgb(63, 5, 5);
+        }
+        
+        .full {
+            display: none;
+            font-weight: normal;
+            overflow: hidden;
+            background-color: #ddd;
+            border: solid black 1px;
+            border-top: none;
+        }
+        /*CSS Code used for Sections of Information on each district in Tokyo*/
+    </style>
+
+</head>
+<!-- I want to emphasize that the use of the center element is that of a stopgap. It is only being used to show what the organization of the content may look like on the webpages when implemented wtih CSS. It is an obsolete element in HTML5,
+        and in regularly cases should not be used. -->
+
+
+<body>
+    <img src="images/cheaplodgingheader.png" alt="HTML5 Icon" style="width:100%;height:500px;">
+
+    <header>
+        <ul>
+            <li><a class="active" href="../../MerandaSection/Home/home.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Info</a>
+                <div class="dropdown-content">
+                    <a href="../../MerandaSection/About/about.html">About Us</a>
+                    <a href="../../MerandaSection/Search_Navigation/search_navigation.html">Search & Navigation</a>
+                    <a href="../../MerandaSection/Contact/contact.html">Contact Page</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="../../KieranSection/travel/travel.html" class="dropbtn">Travel</a>
+                <div class="dropdown-content">
+                    <a href="../../KieranSection/transpocost/transpocost.html">Travel Costs</a>
+                    <a href="../../KieranSection/pack/pack.html">What To Pack</a>
+                    <a href="../../KieranSection/transport/transport.html">Transportation</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="../Do_In_Japan/do_in_japan.html" class="dropbtn">What To Do In Japan</a>
+                <div class="dropdown-content">
+                    <a href="../Travel_Destination/travel_destinations.html">Travel Destinations</a>
+                    <a href="../Food/food.html">Food</a>
+                    <a href="../Lodging/lodging.html">Lodging</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="../../MithraSection/Helpful_Tips/HelpfulTips.html" class="dropbtn">Helpful Tips</a>
+                <div class="dropdown-content">
+                    <a href="../../MithraSection/Common_Japanese_Phrases/CommonJapanesePhrases.html">Common Phrases</a>
+                    <a href="../../MithraSection/Good_And_Bad_Manners/GoodAndBadManners.html">Good & Bad Manners</a>
+                    <a href="../../MithraSection/Common_Signs/CommonSigns.html">Useful Signs to Look Out For</a>
+                </div>
+            </li>
+        </ul>
+
+    </header>
+    <hr>
+    <div style="padding-left: 20px; padding-right: 20px; padding-bottom: 20px">
+        <h1>
+            Cheap Lodging
+            <i class="fas fa-bed"></i>
+        </h1>
+        <hr><br>
+        <p id="intro">When travelling in Japan, there are many ways to save money on lodging while still being able to live in some comfort. They ranged from the unique experiences of Capsule hotels and Internet Cafes to the comfort of cheap Kanshuku or Economy hotels
+            and Airbnb. If you would like to also have the chance to socialize while in Japan, you can possibly also check out the many hostels and dormitories then are open to travellers.</p>
+        <img id="img" src="images/CapsuleHotel.jpg" alt="budget lodging" width="1000" height="650">
+        <hr>
+        <br>
+        <br>
+
+        <section>
+            <h2>Capsule hotels</h2>
+            <img src="images/Capsule_Hotel.jpg" alt="Capsule Hotel" width="500" height="325">
+            <div class="label" onclick="show_capsulehotel()">
+                <h2><i>Click To Learn More</i></h2>
+            </div>
+            <div class="full" id="capsulehotel">
+                <p class="listinfo">Click on me to reveal more info</p>
+                <div class="divinfo" style="display:none;">
+                    <h3>Description</h3>
+                    <p>A type of hotel developed in Japan that features many small bed-sized rooms known as capsules. Capsule hotels provide cheap, basic overnight accommodation for guests who do not require or who cannot afford larger, more expensive rooms
+                        offered by more conventional hotels. </p>
+                    <p class="byeinfo">Make sure to click me to fade out again</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Internet Cafes</h2>
+            <img src="images/Internet_Cafe.jpg" alt="Internet Cafe" width="500" height="325">
+            <div class="label" onclick="show_internetcafe()">
+                <h2><i>Click To Learn More</i></h2>
+            </div>
+            <div class="full" id="internetcafe">
+                <p class="listinfo">Click on me to reveal more info</p>
+                <div class="divinfo" style="display:none;">
+                    <h3>Description</h3>
+                    <p>Japan has a strong Internet cafe culture, with most serving a dual purpose as joint Internet-manga cafes. They also give access to "night packs", which allows people to sleep and shower in their facilities. Sadly, this has created
+                        a culture of "net cafe refugees" and "net cafe homeless", where people use net cafes to run away from home and sometimes the problems of life. As such, internet cafes are a cheap option, you may end up encountering some interesting
+                        stories while staying there.
+                    </p>
+                    <p class="byeinfo">Make sure to click me to fade out again</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Economy hotels or "Kanshuku"</h2>
+            <img src="images/Kanshuku.jpg" aalt="Kanshuku" width="500" height="325">
+            <div class="label" onclick="show_kanshuku()">
+                <h2><i>Click To Learn More</i></h2>
+            </div>
+            <div class="full" id="kanshuku">
+                <p class="listinfo">Click on me to reveal more info</p>
+                <div class="divinfo" style="display:none;">
+                    <h3>Description</h3>
+                    <p>Similar to hostels, they tend to offer a cheap accomendation for people travelling without that much money. The difference is that, kanshuku's tend to be very japanese in style, with many of the rooms having tatami mat floors and futon
+                        beds. It is an interesting way of staying in Japan, so if you want to spice them up a bit, why not give it a try.
+                    </p>
+                    <p class="byeinfo">Make sure to click me to fade out again</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Airbnb</h2>
+            <img src="images/Airbnb.jpg" alt="Airbnb" width="500" height="325">
+            <div class="label" onclick="show_airbnb()">
+                <h2><i>Click To Learn More</i></h2>
+            </div>
+            <div class="full" id="airbnb">
+                <p class="listinfo">Click on me to reveal more info</p>
+                <div class="divinfo" style="display:none;">
+                    <h3>Description</h3>
+                    <p>Airbnb's can be found in a lot of countries around the world, and Japan is not an exception. If you are looking for a place that feels more like home or wishing to rent up a very extravagant accomendation, this may be an option.</p>
+                    <p class="byeinfo">Make sure to click me to fade out again</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Guesthouses</h2>
+            <img src="images/Ryokan.jpg" alt="Ryokan" width="500" height="325">
+            <div class="label" onclick="show_ryokan()">
+                <h2><i>Click To Learn More</i></h2>
+            </div>
+            <div class="full" id="ryokan">
+                <p class="listinfo">Click on me to reveal more info</p>
+                <div class="divinfo" style="display:none;">
+                    <h3>Description</h3>
+                    <p>Similar to the Kanshuku, the Ryokan could be considered the embodiment of Japanese hospitality, with a difference being the increase quality of living (as well as the accommpanying price increase). These Japanese inns offer a variety
+                        of facilities, from open hot springs to full course dinners prepared for you by the Kanshuku staff. If you wish to experience traditional Japanese hospitality, then this is the place for you!
+                    </p>
+                    <p class="byeinfo">Make sure to click me to fade out again</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Hostels</h2>
+            <img src="images/Hostels.jpg" alt="Hostels" width="500" height="325">
+            <div class="label" onclick="show_hostel()">
+                <h2><i>Click To Learn More</i></h2>
+            </div>
+            <div class="full" id="hostel">
+                <p class="listinfo">Click on me to reveal more info</p>
+                <div class="divinfo" style="display:none;">
+                    <h3>Description</h3>
+                    <p>a lower-cost form of short-term shared sociable lodging where guests can rent a bed, usually a bunk bed in a dormitory, with shared use of a lounge and sometimes a kitchen. Rooms can be mixed or single-sex and have private or shared
+                        bathrooms. Private rooms may also be available, but the property must offer dormitories to be considered a hostel.</p>
+                    <p class="byeinfo">Make sure to click me to fade out again</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

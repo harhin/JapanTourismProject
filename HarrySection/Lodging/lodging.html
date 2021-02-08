@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lodging</title>
+    <link rel="stylesheet" href="ExternalCSS.css" />
+    <link rel="stylesheet" href="dropdown.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="Lodgingjs.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        //Jquery script
+        $(document).ready(function() {
+            $("#info").mouseenter(function() {
+                alert("This Price Range Table will give you a range on certain price intervals to help you easily decide on which places to stay at in Japan. Make sure to click on the checkbox to avoid seeing this message again.");
+            });
+        });
+
+        $(document).ready(function() {
+            $("#cheap").click(function() {
+                window.open(this.href = "../cheap_lodging/cheap_lodging.html");
+                return false;
+            });
+        });
+
+        $(document).ready(function() {
+            $("#expensive").click(function() {
+                window.open(this.href = "../../KieranSection/expensive_lodging/expensivelodging.html");
+                return false;
+            });
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+        
+        .bg {
+            /* The image used */
+            background-image: url("traveldestinationheader.png");
+            /* Full height */
+            height: 400;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            color: black;
+        }
+        
+        h2 {
+            text-align: left;
+            text-transform: uppercase;
+            color: darkred;
+        }
+        
+        #intro {
+            text-align: center
+        }
+        
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .img1 {
+            opacity: 0.5;
+            filter: alpha(opacity=50);
+        }
+        
+        img:hover {
+            opacity: 1.0;
+            filter: alpha(opacity=100);
+        }
+        
+        .button {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0px 2px 5px 0px rgb(0, 0, 0);
+            width: 300px;
+            height: 50px;
+        }
+        
+        .button:link,
+         :visited {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0px 2px 5px 0px rgb(0, 0, 0);
+            width: 300px;
+        }
+        
+        .button:hover,
+         :active {
+            color: darkblue;
+        }
+        /*Code for CSS Buttons*/
+        
+        #lodgings {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        #lodgings td,
+        #lodgings th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        
+        #lodgings tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        #lodgings tr:hover {
+            background-color: #ddd;
+        }
+        
+        #lodgings th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: darkred;
+            color: white;
+        }
+        
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type=submit] {
+            width: 100%;
+            background-color: darkred;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+            background-color: rgb(114, 5, 5);
+        }
+        /*CSS Form*/
+        
+        .div2 {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        
+        div p {
+            font-style: oblique;
+        }
+        
+        ul.a {
+            list-style-type: square !important;
+            display: inline-block !important;
+            background-color: whitesmoke !important;
+            float: none !important;
+            box-shadow: none !important;
+        }
+        /* overides the dropdown menu external css sheet to ensure that the list don't break */
+        
+        .liv2 {
+            float: none !important;
+            font-weight: normal;
+        }
+        /* overides the dropdown menu external css sheet to ensure that the list don't break */
+    </style>
+
+</head>
+<!-- I want to emphasize that the use of the center element is that of a stopgap. -->
+
+<body>
+
+    <img src="images/lodgingheader.png" alt="HTML5 Icon" style="width:100%;height:500px;">
+
+    <header>
+        <ul>
+            <li><a class="active" href="../../MerandaSection/Home/home.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Info</a>
+                <div class="dropdown-content">
+                    <a href="../../MerandaSection/About/about.html">About Us</a>
+                    <a href="../../MerandaSection/Search_Navigation/search_navigation.html">Search & Navigation</a>
+                    <a href="../../MerandaSection/Contact/contact.html">Contact Page</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="../../KieranSection/travel/travel.html" class="dropbtn">Travel</a>
+                <div class="dropdown-content">
+                    <a href="../../KieranSection/transpocost/transpocost.html">Travel Costs</a>
+                    <a href="../../KieranSection/pack/pack.html">What To Pack</a>
+                    <a href="../../KieranSection/transport/transport.html">Transportation</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="../Do_In_Japan/do_in_japan.html" class="dropbtn">What To Do In Japan</a>
+                <div class="dropdown-content">
+                    <a href="../Travel_Destination/travel_destinations.html">Travel Destinations</a>
+                    <a href="../Food/food.html">Food</a>
+                    <a href="../Lodging/lodging.html">Lodging</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="../../MithraSection/Helpful_Tips/HelpfulTips.html" class="dropbtn">Helpful Tips</a>
+                <div class="dropdown-content">
+                    <a href="../../MithraSection/Common_Japanese_Phrases/CommonJapanesePhrases.html">Common Phrases</a>
+                    <a href="../../MithraSection/Good_And_Bad_Manners/GoodAndBadManners.html">Good & Bad Manners</a>
+                    <a href="../../MithraSection/Common_Signs/CommonSigns.html">Useful Signs to Look Out For</a>
+                </div>
+            </li>
+        </ul>
+
+    </header>
+    <hr>
+
+    <div style="padding-left: 20px; padding-right: 20px; padding-bottom: 20px">
+        <h1>
+            Lodging
+            <i class="fas fa-bed"></i>
+        </h1>
+
+        <hr>
+        <br>
+
+        <div>
+            <p id="intro">When travelling in Japan, there are many ways to save money on lodging while still being able to live in some comfort. They ranged from the unique experiences of Capsule hotels and Internet Cafes to the comfort of cheap Kanshuku or Economy
+                hotels and Airbnb. If you would like to also have the chance to socialize while in Japan, you can possibly also check out the many hostels and dormitories then are open to travellers.</p>
+            <br>
+        </div>
+        <img class="img1" id="cheap" src="images/CapsuleHotel.jpg" alt="budget lodging" width="1000" height="650">
+        <p>
+            <center> <button class="button" onclick="myFunction1()">Cheap Lodging</button></center>
+        </p>
+        <img class="img1" id="expensive" src="images/LuxuryHotel.jpg" alt="expensive food" width="1000" height="650">
+        <p>
+            <center> <button class="button" onclick="myFunction2()">Expensive Lodging</button></center>
+        </p>
+        <hr>
+
+        <h2 id="info">Price Range Tables</h2>
+
+        <table id="lodgings" border="2px">
+            <tr>
+                <th>Lodging</th>
+                <th>Price Range</th>
+            </tr>
+            <tr>
+                <td>Capsule Hotel</td>
+                <td>$</td>
+            </tr>
+            <tr>
+                <td>Internet Cafes</td>
+                <td>$</td>
+            </tr>
+            <tr>
+                <td>Economy hotels or "Kanshuku"</td>
+                <td>$</td>
+            </tr>
+            <tr>
+                <td>Airbnb</td>
+                <td>$</td>
+            </tr>
+            <tr>
+                <td>Guesthouses</td>
+                <td>$</td>
+            </tr>
+            <tr>
+                <td>Hostels</td>
+                <td>$</td>
+            </tr>
+        </table>
+        <!--Table information-->
+        <br>
+        <section>
+            <hr>
+            <h2>To Do list</h2>
+            <p>If you wish to take notes while thinking on where to stay, why not use our To Do List feature by clicking the button below!</p>
+            <div>
+                <button class="button" onclick="ToDoList()">To Do List</button>
+            </div>
+        </section>
+    </div>
+
+
+</body>
+
+</html>
